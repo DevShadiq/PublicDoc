@@ -1,0 +1,86 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <title>Paycode format Using Jquery</title>
+  </head>
+  <body>
+    <form id="example-form" name="my-form">
+      <label>paycode number:</label>
+      <br />
+      <!-- I used an input type of text here so browsers like Chrome do not display the spin box -->
+      <input
+        class="paycode"
+        name="paycode-number"
+        type="text"
+        maxlength="16"
+        placeholder="X-XXXX-XXXX-XXXX-XXXX"
+      />
+      <br />
+      <br />
+      <input type="button" value="Submit" />
+    </form>
+
+    <script>
+      $('.paycode')
+        .on('keypress', function (e) {
+          var key = e.charCode || e.keyCode || 0;
+          var paycode = $(this);
+          if (paycode.val().length === 0) {
+            paycode.val(paycode.val() + '');
+          }
+          // Auto-format- do not expose the mask as the user begins to type
+          if (key !== 8 && key !== 9) {
+            if (paycode.val().length === 1) {
+              paycode.val(paycode.val() + '-');
+            }
+            if (paycode.val().length === 6) {
+              paycode.val(paycode.val() + '-');
+            }
+            if (paycode.val().length === 11) {
+              paycode.val(paycode.val() + '-');
+            }
+            if (paycode.val().length === 16) {
+              paycode.val(paycode.val() + '-');
+            }
+            if (paycode.val().length >= 16) {
+              paycode.val(paycode.val().slice(0, 16));
+            }
+          }
+
+          // Allow numeric (and tab, backspace, delete) keys only
+          return (
+            key == 8 ||
+            key == 9 ||
+            key == 46 ||
+            (key >= 48 && key <= 57) ||
+            (key >= 96 && key <= 105)
+          );
+        })
+
+        .on('focus', function () {
+          paycode = $(this);
+
+          if (paycode.val().length === 0) {
+            paycode.val('');
+          } else {
+            var val = paycode.val();
+            paycode.val('').val(val); // Ensure cursor remains at the end
+          }
+        })
+
+        .on('blur', function () {
+          $paycode = $(this);
+
+          if ($paycode.val() === '(') {
+            $paycode.val('');
+          }
+        });
+    </script>
+  </body>
+</html>
