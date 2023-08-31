@@ -1,0 +1,20 @@
+----git user name and email setup----
+git config --global user.name "orcldbapex"
+git config --global user.email orcldbapex@gmail.com
+
+
+
+-----Git Add File---
+git add .
+
+-----git commit ----
+git commit -m "Forms Dynamic View"
+
+
+----git push origin----
+ git push -u origin master
+
+
+---github username key and pass delete----
+
+ cmdkey /delete:LegacyGeneric:target=git:https://github.com

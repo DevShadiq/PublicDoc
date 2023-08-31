@@ -1,0 +1,96 @@
+#
+# sample tnsnames.ora file added by the Formsconfiguration assistant. 
+#
+#sample entry
+#<ALIAS> = (DESCRIPTION =(ADDRESS_LIST =
+#              (ADDRESS = (PROTOCOL = TCP)
+#              (HOST = <HOST>)(PORT = <PORT)))
+#              (CONNECT_DATA = (SID = <SID)))
+#
+#
+DB_HAMEEM =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 175.29.177.85)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = orclpdb.localdomain)
+    )
+  )
+
+
+HM_TS =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 175.29.168.106)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = orclpdb)
+    )
+  )
+
+
+DB_FL =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 118.179.223.18)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = pdb_florence.localdomain)
+    )
+  )
+
+
+FLORENCE_DB =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 203.202.247.116)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = orclpdb)
+    )
+  )
+
+
+GOODDAY =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 103.198.137.97)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = orclpdb)
+    )
+  )
+
+
+pdbten =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.50.104)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = orclpdb2)
+    )
+  )
+
+URMI_DB =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.123.254)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = orclpdb)
+    )
+  )
+
+NGL_LIVE=
+  (DESCRIPTION=
+    (ADDRESS= (PROTOCOL=TCP)(HOST=103.36.103.62) (PORT=1521)
+    )
+    (CONNECT_DATA=
+      (SERVER=dedicated)
+      (SERVICE_NAME=orclpdb)
+    )
+  )
+
+DBFSL =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 172.16.2.8)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = orclpdb.fashionstepbd.net)
+    )
+  )

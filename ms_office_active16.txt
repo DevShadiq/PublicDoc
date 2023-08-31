@@ -1,0 +1,33 @@
+Activate Microsoft Office 2016 Using Command Prompt.
+Credits : www.bestpcguide.com
+YouTube Channel : https://www.youtube.com/channel/UCKdO11zZGA54vA-8U-fnwYg
+Follow Us @bestpcguide on Instagram, Twitter , Facebook !
+
+
+-------Path-------
+
+cd /d %ProgramFiles%\Microsoft Office\Office16
+
+
+
+cd /d %ProgramFiles(x86)%\Microsoft Office\Office16
+
+
+
+------Convert To Volume-------
+
+
+for /f %x in ('dir /b ..\root\Licenses16\proplusvl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"
+
+
+
+-------CMD--------
+
+
+cscript ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99
+cscript ospp.vbs /unpkey:BTDRB >nul
+cscript ospp.vbs /unpkey:KHGM9 >nul
+cscript ospp.vbs /unpkey:CPQVG >nul
+cscript ospp.vbs /sethst:kms8.msguides.com
+cscript ospp.vbs /setprt:1688
+cscript ospp.vbs /act
