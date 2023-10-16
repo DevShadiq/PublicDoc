@@ -1,0 +1,8 @@
+<i class="material-icons" style="font-size:36px"> <a
+                        href="f?p=&APP_ID.:1:&APP_SESSION.:APPLICATION_PROCESS=DOWNLOAD_FILE:::FILE_ID:&P28_FILE_ID."
+                        download> cloud_download </a></i>
+
+
+ <i class="material-icons" style="font-size:36px"> <a
+                        href="f?p=&APP_ID.:1:&APP_SESSION.:APPLICATION_PROCESS=DOWNLOAD_FILE:::FILE_ID:&P28_FILE_ID_2."
+                        download> cloud_download </a></i>
