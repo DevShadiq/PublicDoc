@@ -1,4 +1,4 @@
-PLSQL Interview Question - 1
+PLSQL Question - 1
 কিছু কিছু শব্দ / শব্দ গুচ্ছ আছে যেগুলু  উলটা
 পড়লেও একই  থাকে কোন পরিবর্তন হয় না। 
  (যেমনঃ madam, tenet etc)
