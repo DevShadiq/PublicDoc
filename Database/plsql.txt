@@ -1,0 +1,24 @@
+PLSQL Interview Question - 1
+কিছু কিছু শব্দ / শব্দ গুচ্ছ আছে যেগুলু  উলটা
+পড়লেও একই  থাকে কোন পরিবর্তন হয় না। 
+ (যেমনঃ madam, tenet etc)
+এমন শব্দ চেক করার জন্য একটা  PLSQL কোড  লিখুন।
+
+DECLARE
+   v_string           VARCHAR2 (20) := 'tenet';
+   v_letter           VARCHAR2 (40);
+   v_reverse_string   VARCHAR2 (20);
+BEGIN
+   FOR i IN REVERSE 1 .. LENGTH (TRIM (v_string))
+   LOOP
+      v_letter := SUBSTR (v_string, i, 1);
+      v_reverse_string := v_reverse_string || '' || v_letter;
+   END LOOP;
+
+   IF v_reverse_string = v_string
+   THEN
+      DBMS_OUTPUT.Put_line (v_reverse_string || '' || ' is palindrome');
+   ELSE
+      DBMS_OUTPUT.Put_line (v_reverse_string || '' || ' is not palindrome');
+   END IF;
+END;
