@@ -1,0 +1,44 @@
+Interview questions asked in MNCs for the roles SQL Developer / PLSQL Developer
+
+1) Diff between delete and truncate?
+2) What is ref cursor ? Diff between static cursor and dynamic cursor?
+3) Explain the joins and its types?
+4) Diff between procedure and function?
+5) What is subquery and explain its types?
+6) How to get unique records without using distinct clause?
+7) Explain the exceptions in PL/SQL?
+8) What is trigger and explain its types?
+9) What are the windows functions in SQL?
+10) What is performance tuning in Oracle?
+11) What is force view?
+12) What are the Collections in PL/SQL?
+13) What is materialized view and also explain its refresh types?
+14) What is Bulk Exception in PL/SQL?
+15) Diff between cursor and collection?
+16) What is dynamic SQL?
+17) Explain the Oracle Hints?
+18) What is table partitioning in SQL?
+19) What is CTE in Oracle?
+20) What is Bitmap index , Function based index?
+21) Diff between clusterd and non clusterd index?
+22) What is mutating error? How to avoid mutating error using compound trigger?
+23) What is implicit cursor, explicit cursor? What are the cursor attributes?
+24) Which are the set operators used in Oracle?
+25) Query to find nth highest salary?
+26) Query to delete duplicate records?
+27) What is overloading procedure?
+28) What is no copy compiler hint?
+29) Explain the packages in PL/SQL? its advantages?
+30) What are the null value functions in SQL?
+31) What is autonomous transaction?
+32) Diff between row level trigger and statement level trigger?
+33) How to find query is using index or not?
+34) What is global temporary table?
+35) What are the functions used in SQL?
+36) What is SQL Loader?
+37) What is SQLCODE and SQLERRM?
+38) What is parameterized cursor?
+39) How to handle exceptions in PL/SQL?
+40) What is normalization? why its needed? explain diff normal forms?
+41) What are the constraints and its types?
+42) What is Pivot function?
