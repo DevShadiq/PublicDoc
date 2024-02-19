@@ -7,4 +7,19 @@ java -jar ords.war --config C:\ords\config serve
 
 apache tomcat setup path
 -Dconfig.url=C:\ords\config
+-------------------------------------------------------
+step 1
+java -jar apps.war --config C:\apps\config install
 
+
+Start next
+java -jar apps.war --config C:\apps\config serve
+
+apache tomcat setup path
+-Dconfig.url=C:\apps\config
+
+
+
+uninstall
+
+java -jar apps.war --config C:\apps\config uninstall
