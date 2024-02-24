@@ -1,0 +1,20 @@
+---crt and key to generate p12 file command source file---
+
+openssl pkcs12 -export -in tms.crt -inkey tms.key -out keystore.p12 -name tmspicosaas
+
+openssl pkcs12 -export -in labexpress.crt -inkey labexpress.key -out keystore.p12 -name labexpress
+
+---Command in Java Bin---
+keytool -importkeystore -srckeystore C:\Users\sadiq\Documents\SSL\keystore.p12 -srcstoretype PKCS12 -destkeystore C:\Users\sadiq\Documents\SSL\labexpress.jks -deststoretype JKS
+
+
+---server.xml file paste under defult connector---
+
+<Connector  protocol="HTTP/1.1" port="443" 
+			maxThreads="150"
+			scheme="https" secure="true" SSLEnabled="true" keystoreFile="conf/picosaas.jks"
+			keystorePass="Dhaka_123" clinetAuth="false" sslProtocol="TLS" />
+
+
+---Redirect Tomcat Apps---
+<% response.sendRedirect("/app/r/tms/tms/home"); %>
