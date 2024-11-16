@@ -72,38 +72,6 @@
                maxParameterCount="1000"
 			   useIPVHosts="true"
                />
-	<!-- <Connector  protocol="HTTP/1.1" port="443" hostName="apex.picosaas.com" keyAlias ="picosaas" -->
-			<!-- address="192.168.3.254" -->
-			<!-- maxThreads="150" -->
-			<!-- scheme="https" secure="true" SSLEnabled="true" keystoreFile="conf/picosaas.jks" -->
-			<!-- keystorePass="Dhaka_123" clinetAuth="false" sslProtocol="TLS" /> -->
-			
-	<!-- <Connector  protocol="HTTP/1.1" port="443" hostName="apex.sadiqpro.com" keyAlias ="apexsadiqpro" -->
-			<!-- address="192.168.3.254" -->
-			<!-- maxThreads="150" -->
-			<!-- scheme="https" secure="true" SSLEnabled="true" keystoreFile="conf/apexsadiqpro.jks" -->
-			<!-- keystorePass="Dhaka_123" clinetAuth="false" sslProtocol="TLS" />							 -->
-	  
-	 <Connector port="443" protocol="org.apache.coyote.http11.Http11NioProtocol"
-           maxThreads="150" 
-           SSLEnabled="true"
-           scheme="https"
-           secure="true"
-           defaultSSLHostConfigName="apex.picosaas.com"
-           >
-    <SSLHostConfig hostName="apex.picosaas.com">
-        <Certificate certificateKeystoreFile="conf/picosaas.jks"
-                     certificateKeystorePassword="Dhaka_123"/>
-    </SSLHostConfig>
-
-    <SSLHostConfig hostName="apex.sadiqpro.com">
-        <Certificate certificateKeystoreFile="conf/apexsadiqpro.jks"
-                     certificateKeystorePassword="Dhaka_123"/>
-    </SSLHostConfig>   
-</Connector>
-	  
-	  
-	  
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -152,6 +120,24 @@
     </Connector>
     -->
 
+<Connector port="443" protocol="org.apache.coyote.http11.Http11NioProtocol"
+           maxThreads="150" 
+           SSLEnabled="true"
+           scheme="https"
+           secure="true"
+           defaultSSLHostConfigName="apex.picosaas.com"
+           >
+    <SSLHostConfig hostName="apex.picosaas.com">
+        <Certificate certificateKeystoreFile="conf/starpicosaas.jks"
+                     certificateKeystorePassword="Dhaka_123"/>
+    </SSLHostConfig>
+
+    <SSLHostConfig hostName="apex.sadiqpro.com">
+        <Certificate certificateKeystoreFile="conf/starsadiqpro.jks"
+                     certificateKeystorePassword="Dhaka_123"/>
+    </SSLHostConfig>
+</Connector>
+
     <!-- Define an AJP 1.3 Connector on port 8009 -->
     <!--
     <Connector protocol="AJP/1.3"
@@ -198,19 +184,17 @@
              Documentation at: /docs/config/valve.html -->
         <!--
         <Valve className="org.apache.catalina.authenticator.SingleSignOn" />
-        -->		
+        -->
 
         <!-- Access log processes all example.
              Documentation at: /docs/config/valve.html
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
-               prefix="localhost_access_log" suffix=".txt"			   
+               prefix="localhost_access_log" suffix=".txt"
                pattern="%h %l %u %t &quot;%r&quot; %s %b" />
 
       </Host>
-	  
-	 
-	  <Host name="apex.picosaas.com"  appBase="webapps" unpackWARs="true" autoDeploy="true">
+	   <Host name="apex.picosaas.com"  appBase="webapps" unpackWARs="true" autoDeploy="true">
           <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
            prefix="picosaas_access_log." suffix=".txt"
            pattern="%h %l %u %t &quot;%r&quot; %s %b" />
@@ -220,8 +204,7 @@
           <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
            prefix="sadiqpro_access_log." suffix=".txt"
            pattern="%h %l %u %t &quot;%r&quot; %s %b" />
-      </Host>
-	  
+        </Host>
     </Engine>
   </Service>
 </Server>
