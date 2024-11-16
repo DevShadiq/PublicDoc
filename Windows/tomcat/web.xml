@@ -1,0 +1,4 @@
+<context-param>
+                <param-name>config.url</param-name>
+                <param-value>C:/app/config</param-value>
+</context-param>
