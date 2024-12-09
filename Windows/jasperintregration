@@ -1,0 +1,30 @@
+------------bin folder cmd---------------
+setConfigDir.cmd ..\webapp\jri.war C:\apps
+getConfigDir.cmd ..\webapp\jri.war
+
+setConfigDir.cmd ..\webapp\jri.war E:\app\jasper
+
+
+-----sql-----------
+ ----C:\app\JasperReport\sql>sqlplus----
+
+
+ @sys_install.sql TMS
+ @sys_install_acl_12_and_above.sql TMS localhost
+
+
+exit
+set NLS_LANG=AMERICAN_AMERICA.AL32UTF8
+
+sqlplus ocp/OCP19@localhost:1521/pdb
+sqlplus TRADE/TRADE19@localhost:1521/pdb
+sqlplus TMS/Tms_123@localhost:1521/pdbcln
+@user_install.sql
+
+
+jdbc:oracle:thin:@//localhost:1521/pdb
+
+
+
+---Font past in tomcat--
+web-inf/lib
